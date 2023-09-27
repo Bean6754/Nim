@@ -37,10 +37,10 @@ proc main() =
     # Desitnation to copy to.
     let dst = $3
     # Check if variable is empty or not.
-    if dst != "":
+    if paramCount() == 2:
       writeFile("dst", src)
-    elif dst == "":
-      echo usage
+    elif paramCount() == 0:
+      HelpMessage()
     else:
       quit(1)
 
