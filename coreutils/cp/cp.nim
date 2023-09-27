@@ -39,7 +39,8 @@ proc main() =
     # Check if variable is empty or not.
     if paramCount() == 2:
       writeFile("dst", src)
-    elif paramCount() == 0:
+    # This hurts my head but it works flawlessly it seems.
+    elif paramCount() == 0 or paramCount() == 1 and paramStr(1) != "":
       HelpMessage()
     else:
       quit(1)
