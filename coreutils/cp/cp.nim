@@ -24,6 +24,7 @@ There is NO WARRANTY, to the extent permitted by law.
   """
 
 proc main() =
+  # Command-line arguments.
   if paramCount() == 1 and (paramStr(1) == "--help" or paramStr(1) == "-h"):
     HelpMessage()
   elif paramcount() == 1 and (paramStr(1) == "--version" or paramStr(1) == "-v"):
@@ -31,7 +32,6 @@ proc main() =
   else:
     # Continue.
 
-    let usage = ""
     # Source to copy from.
     let src = $2
     # Desitnation to copy to.
